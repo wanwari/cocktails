@@ -1,10 +1,11 @@
 import Header from "../components/Header";
+import LoginForm from "../components/LoginForm";
 
 const Login = () => {
 	return (
 		<div className="container mx-auto">
 			<Header />
-			<h1>Login</h1>
+			<LoginForm />
 		</div>
 	);
 };
