@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 import Main from "./pages/Main";
 import NotFound from "./pages/NotFound";
 
@@ -10,7 +10,7 @@ const App = () => {
 				<Routes>
 					<Route path="*" element={<NotFound />} />
 					<Route path="/" element={<Main />} />
-					<Route path="/login" element={<Login />} />
+					<Route path="/profile" element={<Profile />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

@@ -12,10 +12,10 @@ const Header = () => {
 					Search
 				</Link>
 				<Link
-					to="/login"
+					to="/profile"
 					className="px-4 py-2 ml-2 rounded-lg bg-orange-400 text-white hover:bg-orange-500"
 				>
-					Login
+					My Account
 				</Link>
 			</div>
 		</div>
