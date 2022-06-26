@@ -9,8 +9,8 @@ const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
 );
 
-const domain: any = process.env.AUTH0_DOMAIN;
-const clientId: any = process.env.AUTH0_CLIENT_ID;
+const domain: any = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId: any = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 root.render(
 	<React.StrictMode>
