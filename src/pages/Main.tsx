@@ -1,5 +1,12 @@
+import Header from "../components/Header";
+
 const Main = () => {
-	return <h1 className="text-red-300">Main</h1>;
+	return (
+		<div className="container mx-auto">
+			<Header />
+			<h1>Main</h1>
+		</div>
+	);
 };
 
 export default Main;

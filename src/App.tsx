@@ -5,13 +5,15 @@ import NotFound from "./pages/NotFound";
 
 const App = () => {
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="*" element={<NotFound />} />
-				<Route path="/" element={<Main />} />
-				<Route path="/login" element={<Login />} />
-			</Routes>
-		</BrowserRouter>
+		<div className="bg-sky-500 h-screen">
+			<BrowserRouter>
+				<Routes>
+					<Route path="*" element={<NotFound />} />
+					<Route path="/" element={<Main />} />
+					<Route path="/login" element={<Login />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
 	);
 };
 

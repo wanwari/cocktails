@@ -1,5 +1,12 @@
+import Header from "../components/Header";
+
 const Login = () => {
-	return <h1>Login</h1>;
+	return (
+		<div className="container mx-auto">
+			<Header />
+			<h1>Login</h1>
+		</div>
+	);
 };
 
 export default Login;
