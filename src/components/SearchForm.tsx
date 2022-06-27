@@ -1,7 +1,12 @@
 import { useState } from "react";
+import DisplayResults from "./DisplayResults";
+import { useNavigate } from "react-router-dom";
 
 const SearchForm = () => {
 	const [searchBarText, setSearchBarText] = useState("");
+	const [apiResponse, setApiResponse] = useState(null);
+
+	let navigate = useNavigate();
 
 	const searchAPI = async (event: any) => {
 		if (event) event.preventDefault();
@@ -13,8 +18,13 @@ const SearchForm = () => {
 			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
+				setApiResponse(data);
+				navigate("../?q=" + searchBarText, { replace: true });
 			});
 	};
+
+	const searchResults =
+		apiResponse !== null ? <DisplayResults drinks={apiResponse} /> : null;
 
 	return (
 		<div>
@@ -27,6 +37,8 @@ const SearchForm = () => {
 					onChange={(event) => setSearchBarText(event?.target.value)}
 				/>
 			</form>
+
+			{searchResults}
 		</div>
 	);
 };
